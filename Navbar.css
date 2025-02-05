@@ -1,0 +1,82 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f1f8;
+}
+.Navbar{
+    display: flex;
+    margin: 0   5%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 5px;
+    box-shadow: 0 5px 30px 0 rgba(22, 32, 220, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+hr{
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0 5%;
+}
+ul{
+
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    width: 85%;
+}
+li{
+    font-size: 15px;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+button{
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    height: 40px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;}
+
+    .button:hover {
+        background-color: #e0e0e0;
+        color: #000;
+    }
+    
+    .button:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px #007bff;
+    }
+    
+    .button:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    a:hover{
+        background-color: #f9f9f9;
+        border-radius: 7px;
+    }
+    button:hover{
+        background-color: #f1f1f1;
+        border-radius: 7px;
+    }

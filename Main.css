@@ -1,0 +1,1024 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  margin: 40px 100px;
+  gap: 20px;
+}
+
+aside {
+  display: flex;
+  width: 30%;
+  padding: auto;
+}
+
+.inaside {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+
+.inaside1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.inaside11 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+}
+
+.inaside11 h3 {
+  width: 100%;
+  display: flex;
+}
+
+.inaside11 h3 button {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.inaside11 h3 button:hover {
+  background: #f0f0f0;
+}
+
+.insidebutton {
+  display: flex;
+  width: -webkit-fill-available;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+/* Dropdown Style */
+.dropdown-arrow {
+  transition: transform 0.3s;
+}
+
+.dropdown-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+.w-max-content {
+  width: max-content;
+}
+
+.rightpart {
+  margin-top: 22px;
+  border: 1px solid #e5e7eb;
+  width: 65%;
+  border-radius: 6px;
+}
+
+.flex {
+  display: flex;
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.button.undo,
+.button.clear {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.button.redo {
+  background: var(--background);
+  color: var(--gray-300);
+  border: 1px solid var(--gray-200);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background: #e5e7eb;
+}
+
+.canvas-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-content {
+  width: 90%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+}
+
+.konvajs-content {
+  position: relative;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+}
+
+canvas,
+img {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+
+
+.upload-container {
+  visibility: visible;
+  position: absolute;
+}
+
+.upload-box {
+  border-radius: 0.5rem;
+  background: var(--card-bg);
+  color: var(--card-foreground);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  height: 100%;
+  width: 280px;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.upload-content {
+  margin: 0;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.upload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  gap: 0.5rem;
+  background-color: var(--primary-accent-700);
+  color: var(--primary-foreground);
+}
+
+.upload-button:hover {
+  background-color: #8b5cf6;
+}
+
+input.hidden {
+  display: none;
+}
+
+.upload-text {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.actions-container {
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* Text style */
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.input-text {
+  height: 40px;
+  width: 100%;
+  padding: 0.5rem;
+  padding-right: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+.submit-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  background-color: #7f56d9;
+  color: #fff;
+  border: none;
+  padding: 0 1rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.submit-button .check-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.options-container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+
+.text-style-container,
+.colors-container {
+  flex: 1;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.buttons-container,
+.color-buttons-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.text-style-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.background-color {
+  background: rgb(255, 0, 0);
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.375rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-stroke {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1.5px rgb(255, 0, 0);
+  -webkit-text-fill-color: #fff;
+}
+
+.color-button {
+  width: 2.75rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.size-font-container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.size-container,
+.font-container {
+  flex: 1;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  width: 100%;
+}
+
+.font-button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.chevron-down {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* aside 2 dropdown content */
+.flex {
+  display: flex;
+}
+
+.button {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 2px 11px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+.button.active {
+  border-bottom-color: #6941c6;
+}
+
+.button p {
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: left;
+  color: #667085;
+  transition: color 0.25s ease-in-out;
+}
+
+.button.active p {
+  color: #6941c6;
+}
+
+.frames-container,
+.devices-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+/* CSS for the first custom button */
+.custom-button-1 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: whitesmoke;
+  /* bg-gray-200 */
+  border-radius: 10px;
+  border: 2px solid #7f56d9;
+}
+
+.inner-div-1 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(1, 1);
+}
+
+.nested-div-1 {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  border-radius: 10px;
+  background-color: rgb(147, 147, 147);
+}
+
+/* CSS for the second custom button */
+.custom-button-2 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+  border-radius: 10px;
+  border: 2px solid #7f56d9;
+  /* border color */
+}
+
+.inner-button-2 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.nested-div-2 {
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+}
+
+.deep-nested-div {
+  height: 120px;
+  width: 120px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 8px 8px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.deepest-div {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+/* CSS for the third custom button */
+
+.custom-button-3 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+  border-radius: 10px;
+  border: 2px solid #7f56d9;
+  /* border color */
+}
+
+.inner-button-3 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.nested-div-3 {
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: solid rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 10px 0px;
+  padding: 20px;
+}
+
+.deep-nested-div {
+  height: 120px;
+  width: 120px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 8px 8px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.deepest-div {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+
+/* CSS for the fourth custom button */
+.custom-button-4 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+  border-radius: 10px;
+  border: 2px solid #d1d5db;
+  /* border-gray-300 */
+}
+
+.inner-button-4 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.nested-div-4 {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  background: rgba(0, 255, 0, 0.5);
+  border: solid rgba(255, 255, 255, 0.5);
+  box-shadow: rgba(0, 255, 0, 0.5) 0px 0px 10px 0px;
+  padding: 20px;
+}
+
+.deep-nested-div {
+  height: 120px;
+  width: 120px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.deepest-div {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+
+/* CSS for the fifth custom button */
+.custom-button-5 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+  border-radius: 10px;
+  border: 2px solid #d1d5db;
+  /* border-gray-300 */
+}
+
+.inner-button-5 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(0.25, 0.25);
+}
+
+.nested-div-5 {
+  width: 240px;
+  height: 240px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.deep-nested-div {
+  width: 180px;
+  height: 240px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  position: relative;
+  left: 30px;
+  top: 0;
+}
+
+.deepest-div {
+  width: 120px;
+  height: 240px;
+  border-radius: 20px;
+  position: relative;
+  top: -25px;
+  left: 30px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.deepest-div::after {
+  content: '';
+  width: 200px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 40px;
+  left: -40px;
+  border-radius: 20px;
+}
+
+
+/* CSS for the sixth custom button */
+.custom-button-6 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+  border-radius: 10px;
+  border: 2px solid #d1d5db;
+  /* border-gray-300 */
+}
+
+.inner-button-6 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(0.25, 0.25);
+}
+
+.nested-div-6 {
+  width: 240px;
+  height: 240px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.deep-nested-div {
+  width: 180px;
+  height: 240px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  position: relative;
+  left: 30px;
+  top: 0;
+}
+
+.deepest-div {
+  width: 120px;
+  height: 240px;
+  border-radius: 20px;
+  position: relative;
+  top: -25px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.deepest-div::after {
+  content: '';
+  width: 200px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 40px;
+  left: -40px;
+  border-radius: 20px;
+}
+
+
+
+.custom-button-7 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+  border-radius: 10px;
+  border: 2px solid #d1d5db;
+  /* border-gray-300 */
+}
+
+.inner-button-7 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.nested-div-7 {
+  width: 120px;
+  height: 170px;
+  border-radius: 20px;
+  background: rgb(238, 238, 238);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 10px;
+}
+
+.deep-nested-div {
+  height: 50px;
+  display: flex;
+  justify-content: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  gap: 8px;
+  position: relative;
+  top: 15px;
+}
+
+.deepest-div {
+  width: 18px;
+  height: 18px;
+  border-radius: 360px;
+  background: rgb(255, 133, 133);
+}
+
+.deepest-div:nth-child(2) {
+  background: rgb(236, 170, 48);
+}
+
+.deepest-div:nth-child(3) {
+  background: rgb(76, 212, 101);
+}
+
+.nested-div-7::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+.custom-button-8 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+  border-radius: 10px;
+  border: 2px solid #d1d5db;
+  /* border-gray-300 */
+}
+
+.inner-button-8 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.nested-div-8 {
+  width: 120px;
+  height: 170px;
+  border-radius: 20px;
+  background: rgb(85, 85, 85);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 10px;
+}
+
+.deep-nested-div {
+  height: 50px;
+  display: flex;
+  justify-content: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  gap: 8px;
+  position: relative;
+  top: 15px;
+}
+
+.deepest-div {
+  width: 18px;
+  height: 18px;
+  border-radius: 360px;
+  background: rgb(255, 133, 133);
+}
+
+.deepest-div:nth-child(2) {
+  background: rgb(236, 170, 48);
+}
+
+.deepest-div:nth-child(3) {
+  background: rgb(76, 212, 101);
+}
+
+.nested-div-8::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom-button-9 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+  border-radius: 10px;
+  border: 2px solid #d1d5db;
+  /* border-gray-300 */
+}
+
+.inner-button-9 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(0.33, 0.33);
+}
+
+.nested-div-9 {
+  width: 180px;
+  height: 180px;
+  padding: 40px;
+}
+
+.deep-nested-div {
+  width: 220px;
+  height: 220px;
+  top: -20px;
+  left: -20px;
+  border-radius: 20px;
+  background: rgba(0, 255, 0, 0.5);
+  filter: blur(20px);
+  position: relative;
+}
+
+.deepest-div {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  border-radius: 20px;
+}
+
+.active {
+  display: grid;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.inactive {
+  display: grid;
+  /* Make it block to apply the transition */
+  opacity: 0;
+  height: 0;
+  /* Ensures it doesn't take space when hidden */
+  transition: opacity 0.5s ease-in-out, height 0s 0.5s;
+  /* delay height transition */
+}
+
+
+
+
+
+
+.centered-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
